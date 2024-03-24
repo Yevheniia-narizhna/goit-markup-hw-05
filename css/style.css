@@ -482,6 +482,8 @@ fill: #fff;
 
 .modal-overlay {
 background: rgba(46, 47, 66, 0.4);
+top: 0;
+left: 0;
 width: 100%;
 height: 100%;
 position: fixed;
@@ -489,19 +491,41 @@ z-index: 999;
 display: flex;
 justify-content: center;
 align-items: center;
-opacity: 0;
 pointer-events: none;
+opacity: 0;
 transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background: #fcfcfc;
+    border-radius: 4px;
+    width: 408px;
+    height: 584px;
 }
 .is-open {
    opacity: 1; 
    pointer-events: auto;
 }
-
-.modal {
-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-background: #fcfcfc;
+.form-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 4px;
+    width: 360px;
+    height: 336px;
+    padding: 8px 24px;
+}
+.modal-input {
+border: 1px solid rgba(46, 47, 66, 0.4);
 border-radius: 4px;
-width: 408px;
-height: 584px;
+width: 360px;
+height: 40px;
+}
+.modal-wrap {
+    display: flex;
+}
+.modal-icon {
+    top: 50%;
+    left: 16px;
+    transform: translate(-50%);
 }
