@@ -466,12 +466,12 @@ input {
     height: 40px;
     background: #4d5ae5;
     cursor: pointer;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        text-align: center;
-        color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-left: 368px;
 }
@@ -489,8 +489,8 @@ height: 100%;
 position: fixed;
 z-index: 999;
 display: flex;
-justify-content: center;
 align-items: center;
+justify-content: center;
 pointer-events: none;
 opacity: 0;
 transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -506,6 +506,10 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
    opacity: 1; 
    pointer-events: auto;
 }
+.icon-modal {
+    margin-left: 368px;
+
+}
 .form-modal {
     display: flex;
     flex-direction: column;
@@ -515,17 +519,97 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     height: 336px;
     padding: 8px 24px;
 }
+.modal-h {
+font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
 .modal-input {
+position: relative;
 border: 1px solid rgba(46, 47, 66, 0.4);
 border-radius: 4px;
 width: 360px;
 height: 40px;
 }
-.modal-wrap {
-    display: flex;
+.button-modal {
+border-radius: 4px;
+padding: 16px 32px;
+width: 169px;
+height: 56px;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+background: #4d5ae5;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+text-align: center;
+color: #fff;
+cursor: pointer;
+display: block;
 }
 .modal-icon {
     top: 50%;
     left: 16px;
     transform: translate(-50%);
+}
+.modal-input-t {
+border: 1px solid rgba(46, 47, 66, 0.4);
+border-radius: 4px;
+width: 360px;
+height: 120px;
+}
+.check-text {
+font-weight: 400;
+font-size: 12px;
+line-height: 1.16667;
+letter-spacing: 0.04em;
+color: #8e8f99;
+}
+
+.check-icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+.check-field {
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 16px;
+}
+.input-check {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+}
+.input-check-link {
+  display: block;
+  padding-left: 0;
+}
+.modal-wrap:active {
+    fill: #4d5ae5;
+}
+.check {
+position: relative;
+display: inline-block;
+border-radius: 2px;
+border: 1px solid rgba(46, 47, 66, 0.4);
+width: 16px;
+height: 16px;
+fill: transparent;
+cursor: pointer;
+}
+.input-check:checked + .check-text > .check {
+    fill: #FFFFFF;
+    background-color: #404BBF;
+}
+.modal-input:focus {
+    border-color: #4d5ae5;
+}
+.modal-input:focus + .modal-icon {
+    fill: #4d5ae5;
 }
