@@ -368,7 +368,6 @@ transition-property: background-color;
 .overlay {
     position: relative;
     overflow: hidden;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .overlay-p {
     position: absolute;
@@ -395,7 +394,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.social, .footer-lable {
+.social {
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
@@ -403,7 +402,13 @@ letter-spacing: 0.02em;
 color: #FFFFFF;
 margin-bottom: 16px;
 }
-
+.footer-lable {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #FFFFFF;
+}
 .icons-div-footer {
     display: flex;
     gap: 16px;
@@ -430,7 +435,7 @@ input {
 }
 
 .subscribe {
-    margin-left: 80px;
+    margin-left: auto;
 }
 .text-sub {
 margin-bottom: 16px;
@@ -465,7 +470,6 @@ color: #ffffff;
     font-family: "Roboto", sans-serif;
     justify-content: center;
     flex-direction: row;
-    gap: 16px;
     border-radius: 4px;
     padding: 8px 24px;
     min-width: 165px;
@@ -481,7 +485,10 @@ color: #ffffff;
     color: #ffffff;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.button-footer:focus,
+.button-footer:hover {
+    background-color: #404BBF;
+}
 .icon-button {
 fill: #fff;
 margin-left: 16px;
@@ -572,6 +579,7 @@ border: 1px solid rgba(46, 47, 66, 0.4);
 border-radius: 4px;
 width: 100%;
 height: 40px;
+font-size: 12px;
 background-color: transparent;
 padding-left: 38px;
 outline: transparent;
@@ -596,6 +604,10 @@ border: none;
 margin: 0 auto;
 display: block;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-modal:focus,
+.button-modal:hover {
+background-color: #404BBF;
 }
 .modal-icon {
     position: absolute;
@@ -644,6 +656,9 @@ line-height: 1.17;
 letter-spacing: 0.04em;
 color: #8e8f99;
 }
+.input-check {
+    margin-right: 8px;
+}
 .check {
 align-items: center;
 display: inline-flex;
@@ -660,6 +675,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
     fill: #F4F4FD;;
     background-color: #404BBF;
     border: none;
+}
+.input-check:focus+.check-text>.check {
+    border-color: #4D5AE5;
 }
 .modal-input:focus,
 .modal-input-t:focus {
